@@ -30,15 +30,4 @@ def arithmetic_arranger(mylist, result=False):
 
     # Working on the perfect data maybe without error ^_^
     for single in mylist:
-        data = single.split('+').split('-').split('*').split('/')
-        result = 0
-        if "+" in single:
-            for add in data:
-                result += add
-        elif "-" in single:
-            if len(data) == 2:
-                result = int(data[1]) - int(data[0])
-        elif '*' in single:
-            for mul in data:
-                result *= mul
-        elif '/' in single:
+        pass
