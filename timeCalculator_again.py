@@ -40,10 +40,14 @@ def add_time(time, duration, day=""):
                 day = key.capitalize()
 
     ############################################
-    part1 = str(calHour).zfill(
-        2) if calHour < 12 else str(calHour % 12).zfill(2) + ":" + str(calMinute).zfill(2) + " " + "AM" if calHour < 12 else "PM"
-    part2 = ''
-    part3 = ''
+    part1 = (str(calHour) if calHour < 12 else str(calHour % 12)) + ":" + \
+        str(calMinute).zfill(2) + " " + ("AM" if calHour < 12 else "PM")
+    part2 = day
+    part3 = day_later_val
+    if part2 != "":
+        print(part1+',', part2, part3)
+    else:
+        print(part1, part2, part3)
 
     # (next day) if result is next day
     # (n days later) if result is more than 1 day
