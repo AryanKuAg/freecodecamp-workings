@@ -1,5 +1,3 @@
-
-
 class Rectangle:
     def __init__(self, width, height):
         self.width = width
@@ -31,7 +29,13 @@ class Rectangle:
         return picture
 
     def get_amount_inside(self, otherShape):  # future
-        pass
+        mywidth = self.width
+        myheight = self.height
+        otherwidth = otherShape.width
+        otherheight = otherShape.height
+        width = mywidth // otherwidth
+        height = myheight // otherheight
+        return width * height
 
     def __str__(self):
         return f"Rectangle(width={self.width}, height={self.height})"
@@ -55,22 +59,4 @@ class Square(Rectangle):
     def set_height(self, side):
         self.height = side
 
-
 ########################################
-# rect = Rectangle(10, 5)
-# print(rect.get_area())
-# rect.set_height(3)
-# print(rect.get_perimeter())
-# print(rect)
-# print(rect.get_picture())
-
-# sq = Square(9)
-# print(sq.get_area())
-# sq.set_side(4)
-# print(sq.get_diagonal())
-# print(sq)
-# print(sq.get_picture())
-
-# rect.set_height(8)
-# rect.set_width(16)
-# print(rect.get_amount_inside(sq))
